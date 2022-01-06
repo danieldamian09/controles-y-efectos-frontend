@@ -96,4 +96,9 @@ div {
   font-size: 56px;
   color: rgb(50, 50, 150);
   /* Se deben generar multiples sombras que esten muy pegadas */
+  text-shadow: 
+  1px 1px  2px rgb(40, 40, 140), 
+  2px 2px  2px rgb(35, 35, 135), 
+  4px 4px  2px rgb(30, 30, 130),
+  3px 4px  4px rgba(0, 0, 0, 0.2)
 }
