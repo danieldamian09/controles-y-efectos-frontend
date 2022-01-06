@@ -78,3 +78,22 @@ div {
   z-index: -1;
   box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.30);
 }
+
+/* Existe otra propiedad de box-shadow (4 valor) que nos permite extender la sombra */
+.box-3d{
+  background-color: rgb(200, 50, 50);
+  width: 300px;
+  height: 200px;
+  box-shadow: 3px 3px 0px 3px rgb(180, 40, 40), 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Vamos a simular el click */
+.box-3d:active{
+  box-shadow: 2px 2px 0px 2px rgb(180, 40, 40), 3px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.threeD{
+  font-size: 56px;
+  color: rgb(50, 50, 150);
+  /* Se deben generar multiples sombras que esten muy pegadas */
+}
