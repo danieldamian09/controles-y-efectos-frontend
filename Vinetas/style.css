@@ -1,0 +1,21 @@
+.custom-list li{
+  list-style-type: none;
+  position: relative;
+}
+
+.custom-list li::before{
+  content: "  \f556";
+  font-family: FontAwesome;
+  position: absolute;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* background: blue; */
+  left: -1.3em;
+  top: 0.25em;
+  color: greenyellow;
+}
