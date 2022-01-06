@@ -52,3 +52,29 @@ div {
   -ms-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
 }
+
+.card-three{
+  background: white;
+  border: 2px;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.card-three::after {
+  content: "";
+  width: 30%;
+  height: 10px;
+  top: 93%;
+  left: 69%;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  position: absolute;
+  /* background: red; */
+  background: transparent;
+  z-index: -1;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.30);
+}
