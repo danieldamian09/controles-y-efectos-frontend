@@ -1,0 +1,54 @@
+body {
+  background-color: #eee;
+}
+
+div {
+  display: inline-block;
+  margin: 5px;
+}
+
+.card {
+  background: white;
+  border: 2px;
+  width: 300px;
+  height: 400px;
+  /* Sombra, primer valor se proyecta a la derecha, segundo valor es como se proyecta hacia abajo, despues viene el desenfoque y por ultimo el color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.16), 0px 2px 10px rgba(0, 0, 0, 0.12);
+
+}
+
+/* Segundo Efecto */
+.card-two {
+  background: white;
+  border: 2px;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+.card-two::before, .card-two::after {
+  content: "";
+  width: 30%;
+  height: 10px;
+  top: 93%;
+  left: 69%;
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  position: absolute;
+  /* background: red; */
+  background: transparent;
+  z-index: -1;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.30);
+}
+
+.card-two::before {
+  left: 1%;
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+}
