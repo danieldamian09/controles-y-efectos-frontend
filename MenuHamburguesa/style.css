@@ -35,6 +35,16 @@
 
 .main-container .lateral-menu {
   width: 300px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.main-container .lateral-menu li{
+  font-size: 32px;
+  padding: 8px 15px;
+  list-style-type: none;
+  border-bottom: solid 2px #eee;
 }
 
 
