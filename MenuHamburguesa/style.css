@@ -5,6 +5,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.overflow-control{
+  overflow-x: hidden;
+}
+
 .main-container {
     white-space: nowrap;
     position: relative;
