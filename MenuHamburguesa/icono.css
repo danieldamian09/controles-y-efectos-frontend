@@ -1,0 +1,158 @@
+/*Change to watch in slow motion */
+:root{
+  --duration: 0.5s;
+  --size: 100%;
+}
+
+.navicon-button {
+  display: inline-block;
+  position: relative;
+  padding: 2.0625rem 1.5rem;
+  transition: 0.25s;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.8;
+}
+
+.navicon-button .navicon::before, .navicon-button .navicon::after{
+  transition: 0.25s;
+} 
+
+.navicon-button:hover{
+  transition: 0.5s;
+  opacity: 1;
+}
+
+.navicon-button:hover .navicon::before, .navicon-button:hover .navicon::after{
+  transition: 0.25s;
+}
+
+.navicon-button:hover .navicon::before{
+  top: 0.825rem;
+}
+
+.navicon-button:hover .navicon::after{
+  top: -0.825rem;
+}
+
+.navicon{
+  position: relative;
+  width: 2.5em;
+  height: .3125rem;
+  background: white;
+  transition: 0.5s;
+  border-radius: 2.5rem;
+}
+
+.navicon::before, .navicon::after{
+  display: block;
+		content: "";
+		height: 0.3125rem;
+		width: 2.5rem;
+    background: white;
+		position: absolute;
+		z-index: -1;
+		transition: 0.5s 0.25s;
+		border-radius: 1rem;
+}
+
+.navicon::before{
+  top: 0.625rem;
+}
+
+.navicon::after{
+  top: -0.625rem;
+}
+
+.open:not(.steps) .navicon:before, .open:not(.steps) .navicon:after{
+	top: 0 !important;
+}
+
+.open .navicon:before, .open .navicon:after {
+	transition: 0.5s;
+}
+
+/* Minus */
+.open {
+	transform: scale(0.75);
+}
+
+/* Arrows */
+.open.left-arrow .navicon::before, .open.right-arrow .navicon::before, .open.upper-arrow .navicon::before, .open.left-arrow .navicon::after, .open.right-arrow .navicon::after, .open.upper-arrow .navicon::after  {
+  width: 1.5rem;
+}
+
+.open.left-arrow .navicon::before, .open.right-arrow .navicon::before, .open.upper-arrow .navicon::before{
+  transform: rotate(35deg);
+  transform-origin: left top;
+}
+
+.open.left-arrow .navicon::after, .open.right-arrow .navicon::after, .open.upper-arrow .navicon::after{
+  transform: rotate(-35deg);
+  transform-origin: left bottom;
+}
+
+.open.upper-arrow {
+	transform: scale(0.75) rotate(90deg);
+}
+
+.open.right-arrow .navicon::before{
+  transform: translate3d(1em, 0, 0) rotate(-35deg);
+  transform-origin: right top;
+}
+
+.open.right-arrow .navicon::after{
+  transform: translate3d(1em, 0, 0) rotate(35deg);
+  transform-origin: right bottom;
+}
+
+/* × and + */
+.open.plus .navicon, .open.x .navicon{
+  background: transparent;
+}
+
+.open.plus .navicon::before, .open.x .navicon::before{
+  transform: rotate(-45deg);
+}
+
+.open.plus .navicon::after, .open.x .navicon::after{
+  transform: rotate(45deg);
+}
+
+.open.plus {
+	transform: scale(0.75) rotate(45deg);
+}
+
+
+/* Base ================== */
+/* * { box-sizing: border-box; }
+
+html { font-size: var(--size); }
+html, body, section { position: relative; height: 100%; }
+
+body {
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  max-width: 40rem;
+  border-radius: .5rem .5rem 0.5rem 0.5rem;
+  background: white;
+  height: 300px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+  background: black;
+  border-radius: .5rem .5rem 0 0;
+  padding: 0 1rem;
+}
+
+section *, section *:before, section *:after {
+  transform: translate3d(0, 0, 0);
+} */

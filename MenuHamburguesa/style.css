@@ -16,10 +16,9 @@
   -o-transition: left 0.3s;
 }
 
-.main-container:hover{
+/* .main-container:hover{
     left: 0px;
-}
-
+} */
 
 .main-container *{
   white-space: normal;
@@ -103,3 +102,7 @@
   position: fixed;
   top: 0;
 } */
+
+.navicon-button{
+  vertical-align: middle;
+}
