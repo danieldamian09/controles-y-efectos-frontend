@@ -55,3 +55,8 @@
 .text p{
   padding: 50px;
 }
+
+.pined{
+  position: fixed;
+  top: 0;
+}
