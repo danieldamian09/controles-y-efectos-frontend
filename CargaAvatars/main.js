@@ -6,6 +6,7 @@
     let image = files[0];
 
     let imageURL = URL.createObjectURL(image);
+    console.log(imageURL)
 
     document.querySelector(".profile .img").style.backgroundImage = "url('"+imageURL+"')";
 
