@@ -35,16 +35,39 @@
   color: #999;
 }
 
+.indicator{
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  height: 5px;
+  width: 0px;
+  background-color: rgb(50, 50, 200);
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
 .tabs{
   overflow: hidden;
   position: relative;
 }
 
 .tabs .container{
-  /* hacemos el espacio infinito */
-  white-space: nowrap;
+  /*hacemoselespacioinfinito*/white-space: nowrap;
   position: relative;
   left: 0px;
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .tabs .container *{
