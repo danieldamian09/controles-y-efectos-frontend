@@ -1,0 +1,38 @@
+
+
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li{
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card{
+  background: #fff;
+  margin-top: 10px;
+  padding: 7px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0, 0.12);
+  width: 400px;
+  height: 100px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+
+.draggin{
+  position: fixed;
+}
+
