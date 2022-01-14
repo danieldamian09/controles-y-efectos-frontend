@@ -38,11 +38,38 @@ class Search {
 class Autocomplete {
   
   constructor(input_selector, base_url){
+    // para que no se nos cambie le valor de this
+    this.search = this.search.bind(this)
     // Creamos un metodo que nos va a crear una datalist
     this.input = document.querySelector(input_selector);
     this.url = base_url;
+    // obtener el valor del campo "input"
+    this.value = ""
+    // limitar las peticiones para optimizar
+    this.interval = null;
     this.buildDataList();
+    this.bindEvents();
   }
+
+    bindEvents(){
+      this.input.addEventListener('keyup', () => {
+         // !no buscar si hay un string vacio
+        if(this.input.value == this.value || this.input.value.length < 3) return;
+        
+
+        //* optimizar la busqueda
+        if(this.interval) window.clearInterval(this.interval);
+
+
+        
+        this.value = this.input.value;
+
+        //* optimizar la busqueda
+        this.interval = window.setTimeout(this.search, 500);
+
+        
+      })
+    }
 
   
     // Construir el node (datalist)
@@ -78,7 +105,7 @@ class Autocomplete {
     }
 
     search(){
-      Search.get(this.url+"harry")
+      Search.get(this.url+this.value)
       .then(results => this.build(results));
       this.url = "https://www.googleapis.com/books/v1/volumes?q=;"
     }
@@ -90,7 +117,7 @@ class Autocomplete {
 
   // instanciamos un nuevo objeto de la clase autocomplete
   let automcomplete = new Autocomplete("#searcher", GoogleBooksApiURL);
-  automcomplete.search();
+  
 
 })();
 
