@@ -25,11 +25,11 @@ li{
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0, 0.12);
   width: 400px;
   height: 100px;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
+  /* transition: all 0.4s; */
+  /* -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
-  -o-transition: all 0.4s;
+  -o-transition: all 0.4s; */
 }
 
 .draggin{
